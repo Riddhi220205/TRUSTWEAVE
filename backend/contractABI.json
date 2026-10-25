@@ -1,0 +1,288 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      }
+    ],
+    "name": "DeviceCompromised",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      }
+    ],
+    "name": "DeviceRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "bugType",
+        "type": "string"
+      }
+    ],
+    "name": "IncidentAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "score",
+        "type": "uint256"
+      }
+    ],
+    "name": "TrustUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "bugType",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "recovery",
+        "type": "string"
+      }
+    ],
+    "name": "addIncident",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "name": "deviceExists",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "name": "devices",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "trustScore",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "compromised",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDeviceCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDeviceIds",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      }
+    ],
+    "name": "getIncidentCount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "incidents",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "bugType",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "recovery",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      }
+    ],
+    "name": "markCompromised",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      }
+    ],
+    "name": "registerDevice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "score",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateTrustScore",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
