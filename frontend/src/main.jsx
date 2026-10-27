@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 import * as api from './services/api';
+import { USE_DEMO } from './services/api';
 
 const ICONS = {
   dashboard: '◈',
@@ -291,7 +292,7 @@ function App() {
             <h1>{pageTitle}</h1>
           </div>
           <div className="header-actions">
-                        <span className="live"><i /> Blockchain-backed data</span>
+                        <span className="live"><i /> {USE_DEMO ? 'Demo data (not from blockchain)' : 'Blockchain-backed data'}</span>
             <button className="primary" onClick={() => setModal(true)}>{ICONS.add} Register device</button>
           </div>
         </header>
